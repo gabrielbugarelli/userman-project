@@ -42,14 +42,13 @@ ____
 ## Step 2
 ### FRONTEND
 Now, with NodeJs installed, just access the directories:
-**/userman-frontend** and run the command
+**/userman-frontend**, rename the file **.env.local.example** to **.env.local** and run the command
 ```
 yarn install
 ```
 
 ### BACKEND
-The same goes for the backend, you need to access the 
-**/userman-frontend** directory and the yarn install command.
+The same goes for the backend, you need to go to the **/userman-frontend** directory, rename the **.env.example** file to **.env** and run the yarn install command.
 ```
 yarn install
 ```
