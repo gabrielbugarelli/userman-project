@@ -70,7 +70,7 @@ ___
 ## Swagger
 After raising the project's backend server, you can access the link http://localhost:3333/ and access the Swagger documentation. 😀🚀
 
-<div styles="display: flex; flex-direction: row; width: 100%;" > 
-	<img alt="swagger-documentation" title="#documentation" src="./.github/swagger-documentation.png" />
-  <img alt="userman-project" title="#userman-project" src="./.github/userman.gif" />
+<div width="100%" align="center" styles="display:flex; flex-direction:row;"> 
+	<img height="270em" alt="swagger-documentation" title="#documentation" src="./github/swagger-documentation.png" />
+  	<img height="270em" alt="userman-project" title="#userman-project" src="./github/userman.gif" />
 </div>
