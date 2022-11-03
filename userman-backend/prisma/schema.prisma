@@ -3,16 +3,16 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
 model User {
   id String @id @unique @default(uuid())
   address Address[]
-  name String @db.VarChar(80)
+  name String
   age Int
-  email String @db.VarChar(100)
+  email String
   created_at DateTime @default(now())
 
   @@map("users")
@@ -22,13 +22,13 @@ model Address {
   id String @id @unique @default(uuid())
   fk_user_id String
   user User @relation(fields: [fk_user_id], references: [id])
-  cep String @db.VarChar(10)
-  public_place String @db.VarChar(300)
-  complement String @db.VarChar(300)
-  district String @db.VarChar(80)
-  locality String @db.VarChar(80)
+  cep String
+  public_place String
+  complement String
+  district String
+  locality String
   created_at DateTime @default(now())
-  uf String @db.VarChar(2)
+  uf String
 
   @@map("address")
 }

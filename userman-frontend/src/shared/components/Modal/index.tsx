@@ -12,12 +12,14 @@ import { UserDto } from '../../../dtos/UserDTO';
 import { Address } from '../../../entities/Address';
 import { getAddresByCep } from '../../../services/apiCepService';
 import { createUser } from '../../../services/usersService';
+import { useUsers } from '../../hooks/useUsers';
 import { ButtonClose, ButtonSave, Footer, Header, InputText, ModalContainer } from './styles'
 
 export const Modal: React.FC<ModalProps> = ({isOpen, onClose, children}) => {
   const { register, handleSubmit, reset } = useForm<UserDto>();
   const [ address, setAddress ] = useState<Address>({});
   const [ cep, setCep ] = useState<number>(0);
+  const { getAllUsers } = useUsers();
 
   const handleSave: SubmitHandler<UserDto> = async (data) => {
     let payload: UserDto = {}
@@ -36,6 +38,7 @@ export const Modal: React.FC<ModalProps> = ({isOpen, onClose, children}) => {
       toast.success('Usuário registrado com sucesso!!! 😀');
       reset();
       setAddress({})
+      await getAllUsers();
       return
     }
 
@@ -50,6 +53,7 @@ export const Modal: React.FC<ModalProps> = ({isOpen, onClose, children}) => {
 
     await createUser(payload);
     toast.success('Usuário registrado com sucesso!!! 😀');
+    await getAllUsers();
     reset()
   }
 
@@ -111,7 +115,7 @@ export const Modal: React.FC<ModalProps> = ({isOpen, onClose, children}) => {
             </GridItem>
             <GridItem colSpan={2}>
               <InputText 
-                {...register("address.complement")} required 
+                {...register("address.complement")}
                 value={address.complement} type="text" placeholder='Complement'
               />
             </GridItem>

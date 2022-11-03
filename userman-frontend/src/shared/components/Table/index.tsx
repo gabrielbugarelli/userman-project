@@ -4,25 +4,19 @@ import {
   Tbody,
   Tr,
   Th,
-  Td,
 } from '@chakra-ui/react'
-import { useEffect, useState } from 'react'
-import { User } from '../../../entities/User';
-import { getUsers } from '../../../services/usersService';
+import { useEffect } from 'react';
+import { useUsers } from '../../hooks/useUsers'
 
 import { Main, TableData } from './styles'
 
 export const UserTable: React.FC = () => {
-  const [ users, setUsers ] = useState<User[]>([])
 
-  const listAllUsers = async () => {
-    const response = await getUsers(); 
-    setUsers(response)
-  }
+  const { users, getAllUsers } = useUsers();
 
   useEffect(() => {
-    listAllUsers();
-  }, []);
+    getAllUsers()
+  }, [])
 
   return (
     <Main>
