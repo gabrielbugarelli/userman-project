@@ -1,0 +1,38 @@
+1. A solução deve ser disponibilizada em Cloud ou On-premise?
+
+A solução foi desenvolvida pensando em ser disponibilizada e consumir serviços Cloud,
+como hospedagem no Heroku, na parte backend (que estou tentando fazer nesse momento) 
+e consumo do banco de dados PostgreSQL. O frontend pode ser hospedado em serviços cloud também, como Vercel ou AWS. 
+
+2. Considerando a participação de 4 pessoas técnicas para o desenvolvimento dessa
+solução, responda qual ferramenta acreditas ser apropriada para o controle de
+tarefas da equipe, a ferramenta é ágil?
+
+Para gerenciamento do projeto, eu optaria por utilizar o framework Scrum e
+e distribuir a soluções em entregáveis mediante as sprints. E ferramenta para gerenciamento 
+de tasks, acredito que para o nível deste projeto, a ferramenta Projects do próprio Github ou o Trello
+pode ser o suficiente. Mas caso tanto o time, quanto o projeto crescesse, o uso do Jira seria mais
+interessante.
+
+3. Você se sente capaz de liderar esta equipe? Por quê?
+
+Eu acredito que posso ser um bom Tech Lead e trabalhar alinhado com o time e um 
+analista de sistemas. Gosto de ter uma visão geral do produto de software que está
+sendo desenvolvido, identificar e usar meios criativos que possam gerar mais valor 
+ao produto para o usuário final.
+
+Entretanto, escrever extensas documentações e definir inúmeras tasks para 
+o Backlog do produto como um todo, identificar como necessário o auxilio de um analista.
+
+4. Se pudesse sugerir uma melhoria, mudança ou oportunidade. O que seria?
+
+Em relação ao produto, por mais que pareça apenas um detalhe, um recurso que julgo 
+que faria muita diferença para o usuário, seria a opção de cadastrar o endereço baseando-se dá localização pois,
+sabemos que muitas pessoas moram em bairros grilados, periferia lugares poucos conhecidos onde, o CEP não funciona
+ou até mesmo está desatualizado com as informações. O que na prática, resulta apenas em frustração para o usuário e 
+não resolve o seu problema, que fazer o cadastro na plataforma.
+
+5. Acha válido esse desafio para o processo que está participando?
+
+Sim, nele pude explorar algumas tecnologias bem legais, como o Chakra UI e Prisma ORM.
+E também pude ter a liberdade de definir as tecnologias que julguei mais interessantes.
